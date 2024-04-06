@@ -26,9 +26,8 @@ def main():
             # 表示する行数を指定
             row_count = st.number_input("表示する行数を入力してください", min_value=1, max_value=len(df), value=len(df))
 
-            # 表示するデータが多い場合は、展開可能なセクションを作成して表示
+            # 指定された行数までの表を表示
             st.table(df.head(row_count))
-
 
         except Exception as e:
             st.error("エラーが発生しました: {}".format(e))
